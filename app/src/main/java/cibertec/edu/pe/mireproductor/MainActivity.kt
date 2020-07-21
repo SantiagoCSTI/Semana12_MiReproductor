@@ -4,6 +4,7 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,8 +13,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Reproducir()
+
         //oReporductor= MediaPlayer()
+        btnPlay.setOnClickListener()
+        {
+            Reproducir()
+        }
+
+        btnPause.setOnClickListener()
+        {
+            pausar()
+        }
+
+        btnStop.setOnClickListener()
+        {
+            Finalizar()
+        }
     }
 
     public fun Reproducir()
